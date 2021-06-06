@@ -1,0 +1,12 @@
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\bin\Debug\net5.0\TurboAZ.Service.deps.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\bin\Debug\net5.0\TurboAZ.Service.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\bin\Debug\net5.0\ref\TurboAZ.Service.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\bin\Debug\net5.0\TurboAZ.Service.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\TurboAZ.Service.csprojAssemblyReference.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\TurboAZ.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\TurboAZ.Service.AssemblyInfoInputs.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\TurboAZ.Service.AssemblyInfo.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\TurboAZ.Service.csproj.CoreCompileInputs.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\TurboAZ.Service.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\ref\TurboAZ.Service.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Service\obj\Debug\net5.0\TurboAZ.Service.pdb

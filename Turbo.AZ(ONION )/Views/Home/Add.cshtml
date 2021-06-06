@@ -1,0 +1,322 @@
+﻿@model TurboAZ.Entity.Models.Ad
+
+
+<h1 class="h3 mt-4">Elan yerləşdirmək</h1>
+<hr>
+
+<link rel="stylesheet" type="text/css" href="~/file-upload-with-preview/file-upload-with-preview.min.css" />
+<script src="~/file-upload-with-preview/file-upload-with-preview.min.js"></script>
+
+
+
+<div class="row">
+    <div class="col">
+
+
+        <form method="post" asp-controller="Home" asp-action="Add" enctype="multipart/form-data">
+
+
+
+            <div class="form-group row">
+
+                <label class="col-sm-2 col-form-label">Marka</label>
+                <div class="col-md-4">
+                    <select id="BrandId"  class="form-control" asp-for="BrandId"asp-items="@(new SelectList(ViewBag.Brands, "Value", "Text"))">
+                        <option>Seçin</option>
+                    </select>
+                    <span asp-validation-for="BrandId" class="text-danger"></span>
+                </div>
+
+                <label class="col-sm-2 col-form-label">Yanacaq növü</label>
+                <div class="col-md-4">
+                    <select id="FuelId" class="form-control" asp-items="@(new SelectList(ViewBag.Fuel, "Value", "Text"))">
+                        <option></option>
+                    </select>
+                    <span asp-validation-for="FuelId" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Model</label>
+                <div class="col-md-4">
+
+                    <select id="ModelId" class="form-control" asp-for="ModelId" asp-items="@(new SelectList(String.Empty, "Value", "Text"))">
+                        <option>Seçin</option>
+                    </select>
+                    <span asp-validation-for="ModelId" class="text-danger"></span>
+                </div>
+                <label class="col-sm-2 col-form-label">Ötürücü</label>
+                <div class="col-md-4">
+                    <select id="TransmissionId" class="form-control" asp-for="TransmissionId" asp-items="@(new SelectList(ViewBag.Transmission, "Value", "Text"))">
+                        <option></option>
+                    </select>
+                    <span asp-validation-for="TransmissionId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Ban növü</label>
+                <div class="col-md-4">
+                    <select id="BodyId" class="form-control" asp-for="BodyId" asp-items="@(new SelectList(ViewBag.Body, "Value", "Text"))">
+                        <option>Seçin</option>
+                    </select>
+                    <span asp-validation-for="BodyId" class="text-danger"></span>
+                </div>
+                <label class="col-sm-2 col-form-label">Sürətlər qutusu</label>
+                <div class="col-md-4">
+                    <select id="GearBoxId" class="form-control" asp-for="GearBoxId" asp-items="@(new SelectList(ViewBag.Gearbox, "Value", "Text"))">
+                        <option></option>
+                    </select>
+                    <span asp-validation-for="GearBoxId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Walk" class="col-sm-2 col-form-label">Yürüş</label>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Walk">
+                    <span asp-validation-for="Walk" class="text-danger"></span>
+                </div>
+
+                <label asp-for="Year" class="col-sm-2 col-form-label">Buraxılış ili</label>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Year">
+                    <span asp-validation-for="YearId" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Rəng</label>
+                <div class="col-md-4">
+                    <select id="ColorId" class="form-control" asp-for="ColorId" asp-items="@(new SelectList(ViewBag.Color, "Value", "Text"))">
+                        <option></option>
+                    </select>
+                    <span asp-validation-for="ColorId" class="text-danger"></span>
+                </div>
+                <label class="col-sm-2 col-form-label">Mühərrikin həcmi, sm<sup>3</sup></label>
+                <div class="col-md-4">
+                
+                    @*<select id="EngineCapacityId" class="form-control" asp-for="EngineVolumeId">
+                        <option></option>
+                    </select>*@
+                    <input type="number" id="EngineCapacityId" class="form-control" asp-for="EngineVolumeId"  />
+                    <span asp-validation-for="EngineVolumeId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Price" class="col-sm-2 col-form-label">Qiymət</label>
+                <div class="col-md-2">
+                    <input class="form-control" asp-for="Price">
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                    <span asp-validation-for="Valute" class="text-danger"></span>
+                </div>
+
+                @foreach (var item in ViewBag.Currency)
+                {
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" asp-for="Valute" value="ValuteId">
+                        <label class="form-check-label">AZN</label>
+                    </div>
+                }
+
+                <label asp-for="Hp" class="col-sm-2 col-form-label ml-2">Mühərrikin gücü, a.g.</label>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Hp">
+                    <span asp-validation-for="Hp" class="text-danger"></span>
+                </div>
+
+            </div>
+
+
+            <div class="form-check offset-sm-2">
+                <input class="form-check-input" type="checkbox" asp-for="CreditHave">
+                <label class="form-check-label" asp-for="CreditHave">
+                    Kreditdədir
+                </label>
+            </div>
+            <div class="form-check offset-sm-2">
+                <input class="form-check-input" type="checkbox" asp-for="Barter">
+                <label class="form-check-label" asp-for="Barter">
+                    Barter mümkündür
+                </label>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Note" class="col-sm-2 col-form-label">Əlavə məlumat</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" asp-for="Note"></textarea>
+                </div>
+            </div>
+            <h5>Avtomobilin təchizatı</h5>
+            <div class="form-group row">
+                <div class="form-check ml-3 col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="AlloyWheels">
+                    <label class="form-check-label" asp-for="AlloyWheels">
+                        Yüngül lehmli disklər
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <input class="form-check-input" type="checkbox" asp-for="Abs">
+                    <label class="form-check-label" asp-for="Abs">
+                        ABS
+                    </label>
+                </div>
+                <div class="form-check col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="Lyuk">
+                    <label class="form-check-label" asp-for="Lyuk">
+                        Lyuk
+                    </label>
+                </div>
+                <div class="form-check col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="RainSensor">
+                    <label class="form-check-label" asp-for="RainSensor">
+                        Yağış sensoru
+                    </label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="form-check ml-3 col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="CentralClosure">
+                    <label class="form-check-label" asp-for="CentralClosure">
+                        Mərkəzi qapanma
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <input class="form-check-input" type="checkbox" asp-for="ParkRadar">
+                    <label class="form-check-label" asp-for="ParkRadar">
+                        Park radarı
+                    </label>
+                </div>
+                <div class="form-check col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="Conditioner">
+                    <label class="form-check-label" asp-for="Conditioner">
+                        Kondisioner
+                    </label>
+                </div>
+                <div class="form-check col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="SeatHeating">
+                    <label class="form-check-label" asp-for="SeatHeating">
+                        Oturacaqların isidilməsi
+                    </label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="form-check ml-3 col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="LeatherSalon">
+                    <label class="form-check-label" asp-for="LeatherSalon">
+                        Dəri salon
+                    </label>
+                </div>
+
+                <div class="form-check col-md-2">
+                    <input class="form-check-input" type="checkbox" asp-for="XenonLamps">
+                    <label class="form-check-label" asp-for="XenonLamps">
+                        Ksenon lampalar
+                    </label>
+                </div>
+                <div class="form-check col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="RearCamera">
+                    <label class="form-check-label" asp-for="RearCamera">
+                        Arxa görüntü kamerası
+                    </label>
+                </div>
+                <div class="form-check col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="SideCurtains">
+                    <label class="form-check-label" asp-for="SideCurtains">
+                        Yan pərdələr
+                    </label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="form-check ml-3 col-md-3">
+                    <input class="form-check-input" type="checkbox" asp-for="SeatVent">
+                    <label class="form-check-label" asp-for="SeatVent">
+                        Oturacaqların ventilyasiyası
+                    </label>
+                </div>
+            </div>
+            <h5>Şəkillər</h5>
+
+
+            <div style="width:400px;margin:20px auto 20px auto;">
+                <div class="custom-file-container" data-upload-id="myupload">
+                    <label>
+                        File upload with preview <a href="javascript:void(0)"
+                                                    class="custom-file-container__image-clear">&times;</a>
+                    </label>
+                    <label class="custom-file-container__custom-file">
+                        <input type="file" name="imgfiles" class="custom-file-container__custom-file__custom-file-input" accept="*"
+                               multiple aria-label="Multiple Select Files" />
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                        <span class="custom-file-container__custom-file__custom-file-control"></span>
+                    </label>
+                    <div class="custom-file-container__image-preview" style="overflow:hidden;height:400px;width:500px;overflow-y:scroll;"></div>
+
+                </div>
+            </div>
+
+
+            <h5>Əlaqə</h5>
+            <small class="h6 text-muted mb-5">Elan dərc olunduqdan sonra əlaqə məlumatları ilə bağlı heç bir dəyişiklik həyata keçirilmir.</small>
+            <div class="form-group row mt-3">
+                <label asp-for="Name" class="col-sm-2 col-form-label">Ad</label>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Şəhər</label>
+                <div class="col-md-4">
+                    <select id="CityId" class="form-control" asp-for="CityId" asp-items="@(new SelectList(ViewBag.City, "Value", "Text"))">
+                        <option></option>
+                    </select>
+                    <span asp-validation-for="CityId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-10  offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Pulsuz yerləşdir</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $("#BrandId").change(function () {
+                $.getJSON("/Home/ModelList", { BrandId: $("#BrandId").val() }, function (d) {
+                    var row = "";
+                    console.log(d);
+                    $("#ModelId").empty();
+                    row += "<option>" + "Seçin" + "</option>"
+                    $.each(d, function (i, v) {
+                        row += "<option value=" + v.value + ">" + v.text + "</option>"
+                    });
+                    $("#ModelId").html(row);
+                })
+            })
+        })
+    </script>
+
+    <script type="text/javascript">
+        var upload = new FileUploadWithPreview('myupload');
+    </script>
+
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}

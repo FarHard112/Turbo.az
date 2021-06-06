@@ -1,0 +1,78 @@
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\appsettings.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).exe
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).deps.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).runtimeconfig.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).runtimeconfig.dev.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\ref\Turbo.AZ(ONION ).dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).Views.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Turbo.AZ(ONION ).Views.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Humanizer.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\TurboAZ.DAL.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\TurboAZ.Domain.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\TurboAZ.DAL.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\TurboAZ.Domain.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).csprojAssemblyReference.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).AssemblyInfoInputs.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).AssemblyInfo.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).csproj.CoreCompileInputs.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).RazorAssemblyInfo.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).RazorAssemblyInfo.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\staticwebassets\Turbo.AZ(ONION ).StaticWebAssets.Manifest.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\staticwebassets\Turbo.AZ(ONION ).StaticWebAssets.xml
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\scopedcss\bundle\Turbo.AZ(ONION ).styles.css
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).TagHelpers.input.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).TagHelpers.output.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).RazorCoreGenerate.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).RazorTargetAssemblyInfo.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).RazorTargetAssemblyInfo.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).Views.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).csproj.CopyComplete
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\ref\Turbo.AZ(ONION ).dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).genruntimeconfig.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\_navbar.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Home\Add.cshtml.g.cs

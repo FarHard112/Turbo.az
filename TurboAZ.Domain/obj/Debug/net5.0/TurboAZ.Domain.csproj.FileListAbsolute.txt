@@ -1,0 +1,15 @@
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\bin\Debug\net5.0\TurboAZ.Domain.deps.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\bin\Debug\net5.0\TurboAZ.Domain.runtimeconfig.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\bin\Debug\net5.0\TurboAZ.Domain.runtimeconfig.dev.json
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\bin\Debug\net5.0\TurboAZ.Domain.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\bin\Debug\net5.0\ref\TurboAZ.Domain.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\bin\Debug\net5.0\TurboAZ.Domain.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.csprojAssemblyReference.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.AssemblyInfoInputs.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.AssemblyInfo.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.csproj.CoreCompileInputs.cache
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\ref\TurboAZ.Domain.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.pdb
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\TurboAZ.Domain\obj\Debug\net5.0\TurboAZ.Domain.genruntimeconfig.cache
