@@ -10,7 +10,7 @@ namespace TurboAZ.Entity.Models
     public class EngineVolume
     {
         [Key]
-        public int? EngineVolumeId { get; set; }
+        public int EngineVolumeId { get; set; }
         public double EngineVolumeName { get; set; }
         public List<Ad> Ads { get; set; }
     }

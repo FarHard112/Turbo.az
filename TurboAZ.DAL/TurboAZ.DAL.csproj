@@ -17,8 +17,4 @@
     <ProjectReference Include="..\TurboAZ.Domain\TurboAZ.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repository\Concrete\" />
-  </ItemGroup>
-
 </Project>

@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using Turbo.AZ_ONION__.Models;
 using TurboAZ.DAL;
 using TurboAZ.Entity.Models;
@@ -22,13 +20,13 @@ namespace Turbo.AZ_ONION__.Controllers
         {
             _logger = logger;
             _context = turboDbContext;
-
         }
 
         public IActionResult Index()
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult Add(int BrandId)
         {
@@ -47,7 +45,7 @@ namespace Turbo.AZ_ONION__.Controllers
             ViewBag.Transmission = new SelectList(_context.Transmissions.ToList(), "TransmissionId", "TransmissionName");
             ViewBag.GearBox = new SelectList(_context.GearBoxes.ToList(), "GearBoxId", "GearBoxName");
             ViewBag.City = new SelectList(_context.Cities.ToList(), "CityId", "CityName");
-            ViewBag.EngineCap = _context.EngineVolumes.ToList();
+            ViewBag.EngineCap = new SelectList(_context.EngineVolumes.ToList(), "EngineVolumeId", "EngineVolumeName");
             return View();
         }
 
@@ -63,10 +61,8 @@ namespace Turbo.AZ_ONION__.Controllers
             return Json(itemList);
         }
 
-
         [HttpPost]
-
-        public async Task<IActionResult> Add(int? BrandId,Ad ads)
+        public async Task<IActionResult> Add(int? BrandId, Ad ads)
         {
             List<Brand> brands = _context.Brands.OrderBy(i => i.BrandName).ToList();
             var brandModel = (from brand in brands
@@ -83,7 +79,7 @@ namespace Turbo.AZ_ONION__.Controllers
             ViewBag.Transmission = new SelectList(_context.Transmissions.ToList(), "TransmissionId", "TransmissionName");
             ViewBag.GearBox = new SelectList(_context.GearBoxes.ToList(), "GearBoxId", "GearBoxName");
             ViewBag.City = new SelectList(_context.Cities.ToList(), "CityId", "CityName");
-            ViewBag.EngineCap = _context.EngineVolumes.ToList();
+            ViewBag.EngineCap = new SelectList(_context.EngineVolumes.ToList(), "EngineVolumeId", "EngineVolumeName");
 
             if (ModelState.IsValid)
             {
@@ -121,7 +117,6 @@ namespace Turbo.AZ_ONION__.Controllers
                     Abs = ads.Abs,
                     CityId = ads.CityId,
                     Email = ads.Email,
-
                 };
                 _context.Add(entity);
                 _context.SaveChanges();

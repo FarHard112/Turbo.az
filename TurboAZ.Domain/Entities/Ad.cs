@@ -39,7 +39,7 @@ namespace TurboAZ.Entity.Models
         public int GearBoxId { get; set; }
         public GearBox GearBox { get; set; }
         [Required(ErrorMessage = "Mühərrikin həcmi göstərilməlidir")]
-        public int EngineVolumeId { get; set; }
+        public int? EngineVolumeId { get; set; }
         public EngineVolume EngineVolume { get; set; }
 
         [Required(ErrorMessage = "Buraxılış ili göstərilməlidir")]
