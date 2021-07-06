@@ -1,15 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using TurboAZ.DAL;
+using TurboAZ.DAL.Repository.Abstract;
+using TurboAZ.DAL.Repository.Concrete;
 
 namespace Turbo.AZ_ONION__
 {
@@ -28,6 +25,7 @@ namespace Turbo.AZ_ONION__
             services.AddControllersWithViews();
             services.AddDbContext<TurboDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            services.AddTransient<ITurbo, TurboRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

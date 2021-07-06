@@ -1,12 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Turbo.AZ_ONION__.Models;
-using TurboAZ.DAL;
+using TurboAZ.DAL.Repository.Abstract;
 using TurboAZ.Entity.Models;
 
 namespace Turbo.AZ_ONION__.Controllers
@@ -14,12 +10,12 @@ namespace Turbo.AZ_ONION__.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly TurboDBContext _context;
+        private readonly ITurbo _turbo;
 
-        public HomeController(ILogger<HomeController> logger, TurboDBContext turboDbContext)
+        public HomeController(ILogger<HomeController> logger, ITurbo turbo)
         {
             _logger = logger;
-            _context = turboDbContext;
+            _turbo = turbo;
         }
 
         public IActionResult Index()
@@ -27,107 +23,75 @@ namespace Turbo.AZ_ONION__.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Add(int BrandId)
+        public JsonResult GetBrands()
         {
-            List<Brand> brandlist = _context.Brands.OrderBy(i => i.BrandName).ToList();
-            var brandsModel = from brand in brandlist
-                              select new SelectListItem()
-                              {
-                                  Value = brand.BrandId.ToString(),
-                                  Text = brand.BrandName
-                              };
-            ViewBag.Brands = new SelectList(_context.Brands.ToList(), "BrandId", "BrandName");
-            ViewBag.Currency = new SelectList(_context.Valutes.ToList(), "ValuteId", "ValuteName");
-            ViewBag.Color = new SelectList(_context.Colors.ToList(), "ColorId", "ColorName");
-            ViewBag.Fuel = new SelectList(_context.Fuels.ToList(), "FuelId", "FuelName");
-            ViewBag.Body = new SelectList(_context.Bodies, "BodyId", "BodyName");
-            ViewBag.Transmission = new SelectList(_context.Transmissions.ToList(), "TransmissionId", "TransmissionName");
-            ViewBag.GearBox = new SelectList(_context.GearBoxes.ToList(), "GearBoxId", "GearBoxName");
-            ViewBag.City = new SelectList(_context.Cities.ToList(), "CityId", "CityName");
-            ViewBag.EngineCap = new SelectList(_context.EngineVolumes.ToList(), "EngineVolumeId", "EngineVolumeName");
-            return View();
+            var brands = _turbo.GetBrands();
+            return Json(brands);
         }
 
-        public JsonResult ModelList(int BrandId)
+        public JsonResult GetModels(int BrandId = 1)
         {
-            List<Model> Models = _context.Models.Where(i => i.BrandId == BrandId).OrderBy(i => i.ModelName).ToList();
-            List<SelectListItem> itemList = (from model in Models
-                                             select new SelectListItem
-                                             {
-                                                 Value = model.ModelId.ToString(),
-                                                 Text = model.ModelName
-                                             }).ToList();
-            return Json(itemList);
+            var models = _turbo.GetModels(BrandId);
+            return Json(models);
+        }
+
+        public JsonResult GetFuel()
+        {
+            var fuel = _turbo.GetFuel();
+            return Json(fuel);
+        }
+
+        public JsonResult GetColors()
+        {
+            var colors = _turbo.GetColors();
+            return Json(colors);
+        }
+
+        public JsonResult GetBodies()
+        {
+            var bodies = _turbo.GetBodies();
+            return Json(bodies);
+        }
+
+        public JsonResult GetGearBoxes()
+        {
+            var gearBoxes = _turbo.GetGearBoxes();
+            return Json(gearBoxes);
+        }
+
+        public JsonResult GetTransmissions()
+        {
+            var transmissions = _turbo.GeTransmissions();
+            return Json(transmissions);
+        }
+
+        public JsonResult GetEngineVolumes()
+        {
+            var engineVolumes = _turbo.GetEngineVolumes();
+            return Json(engineVolumes);
+        }
+
+        public JsonResult GetCities()
+        {
+            var cities = _turbo.GetCities();
+            return Json(cities);
+        }
+        public JsonResult GetValutes()
+        {
+            var valutes = _turbo.GetValutes();
+            return Json(valutes);
+        }
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(int? BrandId, Ad ads)
+        public IActionResult Add(int BrandId, Ad ads)
         {
-            List<Brand> brands = _context.Brands.OrderBy(i => i.BrandName).ToList();
-            var brandModel = (from brand in brands
-                              select new SelectListItem
-                              {
-                                  Value = brand.BrandId.ToString(),
-                                  Text = brand.BrandName
-                              }).ToList();
-            ViewBag.brands = brandModel;
-            ViewBag.Currency = new SelectList(_context.Valutes.ToList(), "ValuteId", "ValuteName");
-            ViewBag.Color = new SelectList(_context.Colors.ToList(), "ColorId", "ColorName");
-            ViewBag.Fuel = new SelectList(_context.Fuels.ToList(), "FuelId", "FuelName");
-            ViewBag.Body = new SelectList(_context.Bodies, "BodyId", "BodyName");
-            ViewBag.Transmission = new SelectList(_context.Transmissions.ToList(), "TransmissionId", "TransmissionName");
-            ViewBag.GearBox = new SelectList(_context.GearBoxes.ToList(), "GearBoxId", "GearBoxName");
-            ViewBag.City = new SelectList(_context.Cities.ToList(), "CityId", "CityName");
-            ViewBag.EngineCap = new SelectList(_context.EngineVolumes.ToList(), "EngineVolumeId", "EngineVolumeName");
-
-            if (ModelState.IsValid)
-            {
-                var entity = new Ad()
-                {
-                    BrandId = ads.BrandId,
-                    ModelId = ads.ModelId,
-                    BodyId = ads.BodyId,
-                    Walk = ads.Walk,
-                    ColorId = ads.ColorId,
-                    Price = ads.Price,
-                    ValuteId = ads.ValuteId,
-                    CreditHave = ads.CreditHave,
-                    Barter = ads.Barter,
-                    FuelId = ads.FuelId,
-                    TransmissionId = ads.TransmissionId,
-                    GearBoxId = ads.GearBoxId,
-                    YearId = ads.YearId,
-                    EngineVolumeId = ads.EngineVolumeId,
-                    Hp = ads.Hp,
-                    Note = ads.Note,
-                    AlloyWheels = ads.AlloyWheels,
-                    CentralClosure = ads.CentralClosure,
-                    LeatherSalon = ads.LeatherSalon,
-                    SeatVent = ads.SeatVent,
-                    ParkRadar = ads.ParkRadar,
-                    XenonLamps = ads.XenonLamps,
-                    Lyuk = ads.Lyuk,
-                    Conditioner = ads.Conditioner,
-                    RearCamera = ads.RearCamera,
-                    RainSensor = ads.RainSensor,
-                    SeatHeating = ads.SeatHeating,
-                    SideCurtains = ads.SideCurtains,
-                    Name = ads.Name,
-                    Abs = ads.Abs,
-                    CityId = ads.CityId,
-                    Email = ads.Email,
-                };
-                _context.Add(entity);
-                _context.SaveChanges();
-            }
-
-            return View(ads);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            var readyAds = _turbo.Add(BrandId, ads);
+            return View(readyAds);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

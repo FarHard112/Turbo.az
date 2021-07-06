@@ -3,8 +3,8 @@
 <h1 class="h3 mt-4">Elan yerləşdirmək</h1>
 <hr>
 
-<link rel="stylesheet" type="text/css" href="~/file-upload-with-preview/file-upload-with-preview.min.css" />
-<script src="~/file-upload-with-preview/file-upload-with-preview.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/lib/file-upload-with-preview/file-upload-with-preview.min.css" />
+<script src="~/lib/file-upload-with-preview/file-upload-with-preview.min.js"></script>
 
 <div class="row">
     <div class="col">
@@ -15,16 +15,14 @@
 
                 <label class="col-sm-2 col-form-label">Marka</label>
                 <div class="col-md-4">
-                    <select id="BrandId" class="form-control" asp-for="BrandId" asp-items="@(new SelectList(ViewBag.Brands, "Value", "Text"))">
-                        <option>Seçin</option>
+                    <select id="brandList" class="form-control" asp-for="BrandId">
                     </select>
                     <span asp-validation-for="BrandId" class="text-danger"></span>
                 </div>
 
                 <label class="col-sm-2 col-form-label">Yanacaq növü</label>
                 <div class="col-md-4">
-                    <select id="FuelId" class="form-control" asp-items="@(new SelectList(ViewBag.Fuel, "Value", "Text"))">
-                        <option></option>
+                    <select id="FuelId" class="form-control">
                     </select>
                     <span asp-validation-for="FuelId" class="text-danger"></span>
                 </div>
@@ -34,15 +32,13 @@
                 <label class="col-sm-2 col-form-label">Model</label>
                 <div class="col-md-4">
 
-                    <select id="ModelId" class="form-control" asp-for="ModelId" asp-items="@(new SelectList(String.Empty, "Value", "Text"))">
-                        <option>Seçin</option>
+                    <select id="modelList" class="form-control" asp-for="ModelId">
                     </select>
                     <span asp-validation-for="ModelId" class="text-danger"></span>
                 </div>
                 <label class="col-sm-2 col-form-label">Ötürücü</label>
                 <div class="col-md-4">
-                    <select id="TransmissionId" class="form-control" asp-for="TransmissionId" asp-items="@(new SelectList(ViewBag.Transmission, "Value", "Text"))">
-                        <option></option>
+                    <select id="TransmissionId" class="form-control" asp-for="TransmissionId">
                     </select>
                     <span asp-validation-for="TransmissionId" class="text-danger"></span>
                 </div>
@@ -51,15 +47,13 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Ban növü</label>
                 <div class="col-md-4">
-                    <select id="BodyId" class="form-control" asp-for="BodyId" asp-items="@(new SelectList(ViewBag.Body, "Value", "Text"))">
-                        <option>Seçin</option>
+                    <select id="BodyId" class="form-control" asp-for="BodyId">
                     </select>
                     <span asp-validation-for="BodyId" class="text-danger"></span>
                 </div>
                 <label class="col-sm-2 col-form-label">Sürətlər qutusu</label>
                 <div class="col-md-4">
-                    <select id="GearBoxId" class="form-control" asp-for="GearBoxId" asp-items="@(new SelectList(ViewBag.Gearbox, "Value", "Text"))">
-                        <option></option>
+                    <select id="GearBoxId" class="form-control" asp-for="GearBoxId">
                     </select>
                     <span asp-validation-for="GearBoxId" class="text-danger"></span>
                 </div>
@@ -81,19 +75,14 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Rəng</label>
                 <div class="col-md-4">
-                    <select id="ColorId" class="form-control" asp-for="ColorId" asp-items="@(new SelectList(ViewBag.Color, "Value", "Text"))">
-                        <option></option>
+                    <select id="ColorId" class="form-control" asp-for="ColorId">
                     </select>
                     <span asp-validation-for="ColorId" class="text-danger"></span>
                 </div>
                 <label class="col-sm-2 col-form-label">Mühərrikin həcmi, sm<sup>3</sup></label>
                 <div class="col-md-4">
 
-                    @*<select id="EngineCapacityId" class="form-control" asp-for="EngineVolumeId">
-                            <option></option>
-                        </select>*@
-                    <select id="EngineVolumeId" class="form-control" asp-for="EngineVolumeId" asp-items="@(new SelectList(ViewBag.EngineCap, "Value", "Text"))">
-                        <option></option>
+                    <select id="EngineVolumeId" class="form-control" asp-for="EngineVolumeId">
                     </select>
                     <span asp-validation-for="EngineVolumeId" class="text-danger"></span>
                 </div>
@@ -106,14 +95,12 @@
                     <span asp-validation-for="Valute" class="text-danger"></span>
                 </div>
 
-                @foreach (var item in ViewBag.Currency)
-                {
+                <div class="form-check form-check-inline">
+                 <label class="form-control">Valyuta</label>
+                    <select class="form-control" asp-for="Valute" id="ValuteId"></select>
+                    <span asp-validation-for="ValuteId"></span>
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" asp-for="Valute" value="ValuteId">
-                        <label class="form-check-label">AZN</label>
-                    </div>
-                }
+                </div>
 
                 <label asp-for="Hp" class="col-sm-2 col-form-label ml-2">Mühərrikin gücü, a.g.</label>
                 <div class="col-md-4">
@@ -258,7 +245,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Şəhər</label>
                 <div class="col-md-4">
-                    <select id="CityId" class="form-control" asp-for="CityId" asp-items="@(new SelectList(ViewBag.City, "Value", "Text"))">
+                    <select id="CityId" class="form-control" asp-for="CityId">
                         <option></option>
                     </select>
                     <span asp-validation-for="CityId" class="text-danger"></span>
@@ -283,22 +270,6 @@
 </div>
 @section scripts
 {
-    <script type="text/javascript">
-        $(function () {
-            $("#BrandId").change(function () {
-                $.getJSON("/Home/ModelList", { BrandId: $("#BrandId").val() }, function (d) {
-                    var row = "";
-                    console.log(d);
-                    $("#ModelId").empty();
-                    row += "<option>" + "Seçin" + "</option>"
-                    $.each(d, function (i, v) {
-                        row += "<option value=" + v.value + ">" + v.text + "</option>"
-                    });
-                    $("#ModelId").html(row);
-                })
-            })
-        })
-    </script>
 
     <script type="text/javascript">
         var upload = new FileUploadWithPreview('myupload');
