@@ -5,14 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TurboAZ.Entity.Models
+namespace TurboAZ.Domain.Entities
 {
-   public class ImageType
+    public class ImageTypes
     {
         [Key]
         public int ImageTypeId { get; set; }
-        public string ImageTypeName { get; set; }
-       
 
+        public string ImageTypeName { get; set; }
     }
 }

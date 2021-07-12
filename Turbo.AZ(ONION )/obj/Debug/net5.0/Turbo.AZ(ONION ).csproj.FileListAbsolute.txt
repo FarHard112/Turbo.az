@@ -74,5 +74,9 @@ C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\
 C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\ref\Turbo.AZ(ONION ).dll
 C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).pdb
 C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Turbo.AZ(ONION ).genruntimeconfig.cache
-C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\_navbar.cshtml.g.cs
 C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Home\Add.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\Partials\_headerPartial.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\Partials\_navbar.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\obj\Debug\net5.0\Razor\Views\Shared\Partials\_scriptsPartial.cshtml.g.cs
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\MSI-PC\source\repos\Turbo.AZ(ONION )\Turbo.AZ(ONION )\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

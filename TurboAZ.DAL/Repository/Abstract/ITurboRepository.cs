@@ -7,7 +7,7 @@ using TurboAZ.Entity.Models;
 
 namespace TurboAZ.DAL.Repository.Abstract
 {
-    public interface ITurbo
+    public interface ITurboRepository
     {
         public List<Brand> GetBrands();
         public List<Model> GetModels(int BrandId);
@@ -19,7 +19,9 @@ namespace TurboAZ.DAL.Repository.Abstract
         public List<EngineVolume> GetEngineVolumes();
         public List<City> GetCities();
         public List<Valute> GetValutes();
-        public Ad Add(int BrandId,Ad ads);
+        public List<Year> GetYears();
+        public void Add(int BrandId, Ad ads);
+        public void AddImage(Ad adsModel);
 
     }
 }

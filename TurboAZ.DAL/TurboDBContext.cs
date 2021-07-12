@@ -1,15 +1,13 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using TurboAZ.Entity.Models;
 
 namespace TurboAZ.DAL
 {
-    public class TurboDBContext:DbContext
+    public class TurboDBContext : DbContext
     {
-        public TurboDBContext(DbContextOptions<TurboDBContext>options):base(options)
+        public TurboDBContext(DbContextOptions<TurboDBContext> options) : base(options)
         {
-            
         }
 
         public DbSet<Ad> Ads { get; set; }
@@ -21,7 +19,6 @@ namespace TurboAZ.DAL
         public DbSet<Fuel> Fuels { get; set; }
         public DbSet<GearBox> GearBoxes { get; set; }
         public DbSet<Image> Images { get; set; }
-        public DbSet<ImageType> ImageTypes { get; set; }
         public DbSet<Model> Models { get; set; }
         public DbSet<Transmission> Transmissions { get; set; }
         public DbSet<Valute> Valutes { get; set; }
@@ -33,8 +30,6 @@ namespace TurboAZ.DAL
             {
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
-
-           
         }
     }
 }

@@ -60,11 +60,9 @@ namespace TurboAZ.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("EngineVolumeId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("FuelId")
@@ -86,7 +84,6 @@ namespace TurboAZ.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Note")
@@ -217,7 +214,7 @@ namespace TurboAZ.DAL.Migrations
 
             modelBuilder.Entity("TurboAZ.Entity.Models.EngineVolume", b =>
                 {
-                    b.Property<int?>("EngineVolumeId")
+                    b.Property<int>("EngineVolumeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -262,42 +259,22 @@ namespace TurboAZ.DAL.Migrations
 
             modelBuilder.Entity("TurboAZ.Entity.Models.Image", b =>
                 {
-                    b.Property<int>("ImageId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AdId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ImageTypeId")
+                    b.Property<int?>("AdsId")
                         .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ImageId");
+                    b.HasKey("Id");
 
-                    b.HasIndex("AdId");
-
-                    b.HasIndex("ImageTypeId");
+                    b.HasIndex("AdsId");
 
                     b.ToTable("Images");
-                });
-
-            modelBuilder.Entity("TurboAZ.Entity.Models.ImageType", b =>
-                {
-                    b.Property<int>("ImageTypeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ImageTypeName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ImageTypeId");
-
-                    b.ToTable("ImageTypes");
                 });
 
             modelBuilder.Entity("TurboAZ.Entity.Models.Model", b =>
@@ -394,8 +371,7 @@ namespace TurboAZ.DAL.Migrations
                     b.HasOne("TurboAZ.Entity.Models.EngineVolume", "EngineVolume")
                         .WithMany("Ads")
                         .HasForeignKey("EngineVolumeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("TurboAZ.Entity.Models.Fuel", "Fuel")
                         .WithMany("Ads")
@@ -458,21 +434,12 @@ namespace TurboAZ.DAL.Migrations
 
             modelBuilder.Entity("TurboAZ.Entity.Models.Image", b =>
                 {
-                    b.HasOne("TurboAZ.Entity.Models.Ad", "Ad")
+                    b.HasOne("TurboAZ.Entity.Models.Ad", "Ads")
                         .WithMany("Images")
-                        .HasForeignKey("AdId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("AdsId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("TurboAZ.Entity.Models.ImageType", "ImageType")
-                        .WithMany()
-                        .HasForeignKey("ImageTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Ad");
-
-                    b.Navigation("ImageType");
+                    b.Navigation("Ads");
                 });
 
             modelBuilder.Entity("TurboAZ.Entity.Models.Model", b =>

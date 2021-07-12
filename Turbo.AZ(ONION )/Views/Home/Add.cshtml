@@ -1,4 +1,4 @@
-﻿@model TurboAZ.Entity.Models.Ad
+﻿@model AdViewModel
 
 <h1 class="h3 mt-4">Elan yerləşdirmək</h1>
 <hr>
@@ -22,7 +22,7 @@
 
                 <label class="col-sm-2 col-form-label">Yanacaq növü</label>
                 <div class="col-md-4">
-                    <select id="FuelId" class="form-control">
+                    <select id="FuelId" asp-for="FuelId" class="form-control">
                     </select>
                     <span asp-validation-for="FuelId" class="text-danger"></span>
                 </div>
@@ -65,9 +65,9 @@
                     <span asp-validation-for="Walk" class="text-danger"></span>
                 </div>
 
-                <label asp-for="Year" class="col-sm-2 col-form-label">Buraxılış ili</label>
+                <label asp-for="YearId" class="col-sm-2 col-form-label">Buraxılış ili</label>
                 <div class="col-md-4">
-                    <input class="form-control" asp-for="Year">
+                    <select class="form-control" id="yearList" asp-for="YearId"></select>
                     <span asp-validation-for="YearId" class="text-danger"></span>
                 </div>
             </div>
@@ -92,14 +92,12 @@
                 <div class="col-md-2">
                     <input class="form-control" asp-for="Price">
                     <span asp-validation-for="Price" class="text-danger"></span>
-                    <span asp-validation-for="Valute" class="text-danger"></span>
                 </div>
 
                 <div class="form-check form-check-inline">
-                 <label class="form-control">Valyuta</label>
-                    <select class="form-control" asp-for="Valute" id="ValuteId"></select>
+                    <label class="form-control">Valyuta</label>
+                    <select class="form-control" asp-for="ValuteId"></select>
                     <span asp-validation-for="ValuteId"></span>
-
                 </div>
 
                 <label asp-for="Hp" class="col-sm-2 col-form-label ml-2">Mühərrikin gücü, a.g.</label>

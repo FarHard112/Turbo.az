@@ -149,3 +149,19 @@ $(document).ready(function () {
         }
     });
 });
+$(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "/Home/GetYears",
+        data: "{}",
+        success: function (data) {
+            var s = '<option value="-1">Seçin</option>';
+            console.log("Year catdim");
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                s += '<option value="' + data[i].yearId + '">' + data[i].yearName + '</option>';
+            }
+            $("#yearList").html(s);
+        }
+    });
+});

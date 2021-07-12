@@ -4,9 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Turbo.AZ_ONION__.AutoMappers;
 using TurboAZ.DAL;
-using TurboAZ.DAL.Repository.Abstract;
-using TurboAZ.DAL.Repository.Concrete;
 
 namespace Turbo.AZ_ONION__
 {
@@ -19,16 +18,17 @@ namespace Turbo.AZ_ONION__
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(AdProfil));
             services.AddControllersWithViews();
-            services.AddDbContext<TurboDBContext>(options =>
+
+            services.AddDbContext<TurboDBContext>(
+                options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
-            services.AddTransient<ITurbo, TurboRepo>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -38,7 +38,6 @@ namespace Turbo.AZ_ONION__
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();

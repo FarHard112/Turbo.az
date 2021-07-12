@@ -5,30 +5,30 @@ using TurboAZ.Entity.Models;
 
 namespace TurboAZ.DAL.Repository.Concrete
 {
-    public class TurboRepo : ITurbo
+    public class TurboRepository : ITurboRepository
     {
         private readonly TurboDBContext _context;
 
-        public TurboRepo(TurboDBContext context)
+        public TurboRepository(TurboDBContext context)
         {
             _context = context;
         }
 
+        #region GetDropdownData
+
+        public List<Body> GetBodies()
+        {
+            return _context.Bodies.ToList();
+        }
+
         public List<Brand> GetBrands()
         {
-            var brands = _context.Brands.ToList();
-            return brands;
+            return _context.Brands.ToList();
         }
 
-        public List<Model> GetModels(int BrandId)
+        public List<City> GetCities()
         {
-            var models = _context.Models.Where(x => x.BrandId == BrandId).ToList();
-            return models;
-        }
-
-        public List<Fuel> GetFuel()
-        {
-            return _context.Fuels.ToList();
+            return _context.Cities.ToList();
         }
 
         public List<Color> GetColors()
@@ -36,14 +36,14 @@ namespace TurboAZ.DAL.Repository.Concrete
             return _context.Colors.ToList();
         }
 
-        public List<Transmission> GeTransmissions()
+        public List<EngineVolume> GetEngineVolumes()
         {
-            return _context.Transmissions.ToList();
+            return _context.EngineVolumes.ToList();
         }
 
-        public List<Body> GetBodies()
+        public List<Fuel> GetFuel()
         {
-            return _context.Bodies.ToList();
+            return _context.Fuels.ToList();
         }
 
         public List<GearBox> GetGearBoxes()
@@ -51,24 +51,38 @@ namespace TurboAZ.DAL.Repository.Concrete
             return _context.GearBoxes.ToList();
         }
 
-        public List<EngineVolume> GetEngineVolumes()
+        public List<Model> GetModels(int BrandId)
         {
-            return _context.EngineVolumes.ToList();
+            return _context.Models.Where(x => x.BrandId == BrandId).ToList();
         }
 
-        public Ad Add(int BrandId, Ad ads)
+        public List<Transmission> GeTransmissions()
         {
-            var entity = new Ad()
+            return _context.Transmissions.ToList();
+        }
+
+        public List<Valute> GetValutes()
+        {
+            return _context.Valutes.ToList();
+        }
+
+        public List<Year> GetYears()
+        {
+            return _context.Years.ToList();
+        }
+
+        #endregion GetDropdownData
+
+        public void Add(int BrandId, Ad ads)
+        {
+            var newAd = new Ad()
             {
-                BrandId = ads.BrandId,
+                BrandId = BrandId,
                 ModelId = ads.ModelId,
                 BodyId = ads.BodyId,
                 Walk = ads.Walk,
                 ColorId = ads.ColorId,
                 Price = ads.Price,
-                ValuteId = ads.ValuteId,
-                CreditHave = ads.CreditHave,
-                Barter = ads.Barter,
                 FuelId = ads.FuelId,
                 TransmissionId = ads.TransmissionId,
                 GearBoxId = ads.GearBoxId,
@@ -76,10 +90,13 @@ namespace TurboAZ.DAL.Repository.Concrete
                 EngineVolumeId = ads.EngineVolumeId,
                 Hp = ads.Hp,
                 Note = ads.Note,
+                CreditHave = ads.CreditHave,
+                ValuteId = ads.ValuteId,
+                Barter = ads.Barter,
                 AlloyWheels = ads.AlloyWheels,
                 CentralClosure = ads.CentralClosure,
-                LeatherSalon = ads.LeatherSalon,
                 SeatVent = ads.SeatVent,
+                Abs = ads.Abs,
                 ParkRadar = ads.ParkRadar,
                 XenonLamps = ads.XenonLamps,
                 Lyuk = ads.Lyuk,
@@ -89,24 +106,15 @@ namespace TurboAZ.DAL.Repository.Concrete
                 SeatHeating = ads.SeatHeating,
                 SideCurtains = ads.SideCurtains,
                 Name = ads.Name,
-                Abs = ads.Abs,
                 CityId = ads.CityId,
                 Email = ads.Email,
             };
-
-            _context.Add(entity);
-            _context.SaveChanges();
-            return ads;
+            _context.Ads.Add(newAd);
         }
 
-        public List<City> GetCities()
+       public void AddImage(Ad adsModel)
         {
-            return _context.Cities.ToList();
-        }
-
-        public List<Valute> GetValutes()
-        {
-            return _context.Valutes.ToList();
+            _context.Images.AddRange(adsModel.Images);
         }
     }
 }
